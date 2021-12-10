@@ -1,0 +1,7 @@
+        
+%load_ext autoreload
+%autoreload 2 
+
+p47 = foxdom.initParser() 
+args = p47.parse_args(['llll', 'dddd']) 
+
