@@ -1,6 +1,6 @@
 # foxdom
 
-Helper script for manual crawl web pages and saving them to particular directory. For now, it only works under Linux due to the os.system() function.
+Helper script for manually crawling web pages and saving them to a specific directory. For now, it only works under Linux due to the os.system('beep...') function.
 
 Firstly you need to set the (pseudo) "constants": 
 + CONST_PROFILE = path to Firefox profile (optional)

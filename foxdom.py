@@ -24,7 +24,7 @@ def initParser():
     parser.add_argument("list", help="List file name that contains url-s. – For input.")
     parser.add_argument("dir", default='', help="Output directory where the htlm-s will saved with full DOM.")
     parser.add_argument("--resume", "-r", action='store_true', help="Resume an aborted processing.")        
-    parser.add_argument("--xpath", "-x", help="Control XPATH. If not exists in HTML tree, then beep will occour.")  
+    parser.add_argument("--xpath", "-x", help="Control XPATH. If it does not exist in the HTML tree, it beeps.")  
     return parser    
     
 class pgClass:   # for testing without selenium 
