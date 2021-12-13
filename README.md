@@ -8,6 +8,8 @@ Firstly you need to set the (pseudo) "constants":
 
 Additional settings in the script are: CONST_DELIMITER (for os path), CONTROL_XPATH
 
+The DOCTYPE string is just a constant, which does not necessarily match the original because Selenium cannot query it.
+
 ![Screenshot](screen.png)
 
 This script has its own help:
