@@ -3,12 +3,13 @@
 Helper script for manually crawling web pages and saving them to a specific directory. For now, it only works under Linux due to the os.system('beep...') function.
 
 Firstly you need to set the (pseudo) "constants": 
-+ CONST_PROFILE = path to Firefox profile (optional)
 + CONST_DRIVER = path to Selenium FF driver (if Selenium not found)
 
 Additional settings in the script are: CONST_DELIMITER (for os path), CONTROL_XPATH
 
 The DOCTYPE string is just a constant, which does not necessarily match the original because Selenium cannot query it.
+
+No profile support. (Problematic so I give up.) All sessions will start in private mode.
 
 ![Screenshot](screen.png)
 

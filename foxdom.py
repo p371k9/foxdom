@@ -7,14 +7,15 @@ from lxml import html
 #from IPython import embed
 
 CONTROL_XPATH = "//h1" 
-CONST_PROFILE = '/home/pp/.mozilla/firefox/g2gf3r19.selen'
-CONST_DRIVER =  r'/home/pp/Projects/geckodriver'
+#CONST_PROFILE = '/home/pp/.mozilla/firefox/3nvq20r7.work'
+CONST_DRIVER =  r'/home/pp/projects/geckodriver'
 CONST_DELIMITER = '/'
 
 def initDriver():
     print('Starting Firefox with Selenium...')
-    myprofile = webdriver.FirefoxProfile(CONST_PROFILE)
-    driver = webdriver.Firefox(firefox_profile=myprofile, executable_path=CONST_DRIVER)    
+    #myprofile = webdriver.FirefoxProfile(CONST_PROFILE)
+    #driver = webdriver.Firefox(firefox_profile=myprofile, executable_path=CONST_DRIVER)
+    driver = webdriver.Firefox(executable_path=CONST_DRIVER)        
     driver.set_window_size(800, 600)
     driver.set_window_position(0, 0)
     return driver
@@ -70,13 +71,13 @@ def main(listFile, outDir, pager = pgClass(), skip=0):
             if c.upper() in 'KQ':
                 print(c)
                 break
-            elif c == '\r':
+            elif c == '\n':
                 print('Enter')
                 break
             else:
                 print('\n')
         
-        if c == '\r': # Enter            
+        if c == '\n': # Enter            
             with open(frms.format(i), 'x') as f:
                 f.write(pager.content)
                 print(frms.format(i) + ' saved.')            
